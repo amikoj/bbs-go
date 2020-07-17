@@ -1,0 +1,1 @@
+docker run --privileged=true -p 8082:8082 -d -v /data/projects/bbs-go/server:/data -v /data/nginx/html/:/data/html -v /data/nginx/logs:/data/logs -v /root/.ssh:/root/.ssh --name bbs-go bbs-go:1.0

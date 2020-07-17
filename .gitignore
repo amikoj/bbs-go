@@ -1,3 +1,7 @@
 .idea
 dist
 *.log
+server/Dockerfile
+/server/Dockerfile
+site/nuxt.config.js
+/site/nuxt.config.js
