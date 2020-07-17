@@ -10,7 +10,7 @@
     "precommit": "npm run lint",
     "dev": "nuxt",
     "debug": "node --inspect ./node_modules/.bin/nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build & nuxt start",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
