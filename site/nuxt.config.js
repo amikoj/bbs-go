@@ -108,7 +108,7 @@ export default {
   },
 
   proxy: {
-    '/api/': 'http://go-admin.mediastack.cn/'
+    '/api/': 'http://172.17.0.16:8082/'
   },
 
   // Doc: https://github.com/shakee93/vue-toasted
