@@ -135,7 +135,7 @@ export default {
   },
   head() {
     return {
-      title: 'BBS-GO管理',
+      title: '无线电科普网管理',
       link: [
         {
           rel: 'stylesheet',

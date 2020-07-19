@@ -14,7 +14,7 @@ export default {
     htmlAttrs: {
       lang: 'zh-cmn-Hans'
     },
-    title: '',
+    title: '无线电科普',
     meta: [
       { charset: 'utf-8' },
       {
