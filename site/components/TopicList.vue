@@ -8,9 +8,9 @@
       <!-- 信息流广告 -->
       <adsbygoogle
         v-if="showAd && (index === 3 || index === 10 || index === 18)"
-        ad-slot="4980294904"
+        ad-slot="9686141612"
         ad-format="fluid"
-        ad-layout-key="-ht-19-1m-3j+mu"
+        ad-layout-key="-fb+5w+4e-db+86"
       />
       <article itemscope itemtype="http://schema.org/BlogPosting">
         <div class="topic-header">

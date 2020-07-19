@@ -10,12 +10,12 @@
 
         <div class="ad">
           <!-- 展示广告 -->
-          <adsbygoogle ad-slot="1742173616" />
+          <adsbygoogle ad-slot="6333489467" />
         </div>
 
         <div class="ad">
           <!-- 展示广告 -->
-          <adsbygoogle ad-slot="1742173616" />
+          <adsbygoogle ad-slot="6333489467" />
         </div>
       </div>
     </div>

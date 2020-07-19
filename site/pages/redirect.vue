@@ -12,7 +12,7 @@
             <a :href="url" rel="nofollow"
               >即将跳往站外地址，点击该链接继续跳转&gt;&gt;</a
             >
-            <adsbygoogle ad-slot="1742173616" />
+            <adsbygoogle ad-slot="6333489467" />
           </div>
 
           <div class="columns recommend">

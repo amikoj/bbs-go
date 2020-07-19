@@ -19,9 +19,9 @@
         >
           <adsbygoogle
             v-if="showAd && (index + 1) % 3 === 0 && index !== 0"
-            ad-slot="4980294904"
+            ad-slot="9686141612"
             ad-format="fluid"
-            ad-layout-key="-ht-19-1m-3j+mu"
+            ad-layout-key="-fb+5w+4e-db+86"
           />
           <div class="comment-avatar">
             <img :src="comment.user.smallAvatar" class="avatar" />

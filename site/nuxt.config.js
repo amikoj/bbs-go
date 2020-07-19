@@ -93,7 +93,7 @@ export default {
     [
       '@nuxtjs/google-adsense',
       {
-        id: 'ca-pub-5683711753850351',
+        id: 'ca-pub-5905842540305144',
         pageLevelAds: true
       }
     ]

@@ -11,17 +11,12 @@
             >
               <div class="topic-header">
                 <div class="topic-header-left">
-                  <a
-                    :href="'/user/' + topic.user.id"
-                    :title="topic.user.nickname"
-                  >
+                  <a :href="'/user/' + topic.user.id" :title="topic.user.nickname">
                     <img :src="topic.user.smallAvatar" class="avatar size-45" />
                   </a>
                 </div>
                 <div class="topic-header-center">
-                  <h1 class="topic-title" itemprop="headline">
-                    {{ topic.title }}
-                  </h1>
+                  <h1 class="topic-title" itemprop="headline">{{ topic.title }}</h1>
                   <div class="topic-meta">
                     <span
                       class="meta-item"
@@ -29,9 +24,11 @@
                       itemscope
                       itemtype="http://schema.org/Person"
                     >
-                      <a :href="'/user/' + topic.user.id" itemprop="name">{{
+                      <a :href="'/user/' + topic.user.id" itemprop="name">
+                        {{
                         topic.user.nickname
-                      }}</a>
+                        }}
+                      </a>
                     </span>
                     <span class="meta-item">
                       <time
@@ -40,26 +37,22 @@
                             | formatDate('yyyy-MM-ddTHH:mm:ss')
                         "
                         itemprop="datePublished"
-                        >{{ topic.lastCommentTime | prettyDate }}</time
-                      >
+                      >{{ topic.lastCommentTime | prettyDate }}</time>
                     </span>
                     <span class="meta-item">
                       <a
                         v-if="topic.node"
                         :href="'/topics/node/' + topic.node.nodeId"
                         class="node"
-                        >{{ topic.node.name }}</a
-                      >
+                      >{{ topic.node.name }}</a>
                     </span>
                     <span class="meta-item">
-                      <span
-                        v-for="tag in topic.tags"
-                        :key="tag.tagId"
-                        class="tag"
-                      >
-                        <a :href="'/topics/tag/' + tag.tagId">{{
+                      <span v-for="tag in topic.tags" :key="tag.tagId" class="tag">
+                        <a :href="'/topics/tag/' + tag.tagId">
+                          {{
                           tag.tagName
-                        }}</a>
+                          }}
+                        </a>
                       </span>
                     </span>
                     <span v-if="hasPermission" class="meta-item act">
@@ -74,8 +67,9 @@
                     </span>
                     <span class="meta-item act">
                       <a @click="addFavorite(topic.topicId)">
-                        <i class="iconfont icon-favorite" />&nbsp;{{
-                          favorited ? '已收藏' : '收藏'
+                        <i class="iconfont icon-favorite" />
+                        &nbsp;{{
+                        favorited ? '已收藏' : '收藏'
                         }}
                       </a>
                     </span>
@@ -83,39 +77,34 @@
                 </div>
                 <div class="topic-header-right">
                   <div class="like">
-                    <span
-                      :class="{ liked: topic.liked }"
-                      @click="like(topic)"
-                      class="like-btn"
-                    >
+                    <span :class="{ liked: topic.liked }" @click="like(topic)" class="like-btn">
                       <i class="iconfont icon-like" />
                     </span>
-                    <span v-if="topic.likeCount" class="like-count">{{
+                    <span v-if="topic.likeCount" class="like-count">
+                      {{
                       topic.likeCount
-                    }}</span>
+                      }}
+                    </span>
                   </div>
-                  <span class="count"
-                    >{{ topic.commentCount }}&nbsp;/&nbsp;{{
-                      topic.viewCount
-                    }}</span
-                  >
+                  <span class="count">
+                    {{ topic.commentCount }}&nbsp;/&nbsp;{{
+                    topic.viewCount
+                    }}
+                  </span>
                 </div>
               </div>
 
               <div class="ad">
                 <!-- 信息流广告 -->
                 <adsbygoogle
-                  ad-slot="4980294904"
+                  ad-slot="9686141612"
                   ad-format="fluid"
-                  ad-layout-key="-ht-19-1m-3j+mu"
+                  ad-layout-key="-fb+5w+4e-db+86"
                 />
               </div>
 
               <div class="content topic-content" itemprop="articleBody">
-                <div
-                  v-lazy-container="{ selector: 'img' }"
-                  v-html="topic.content"
-                ></div>
+                <div v-lazy-container="{ selector: 'img' }" v-html="topic.content"></div>
               </div>
 
               <div class="topic-actions">
@@ -127,19 +116,11 @@
                   <i class="iconfont icon-favorite" />
                 </div>
                 <span class="split"></span>
-                <div
-                  :class="{ active: topic.liked }"
-                  @click="like(topic)"
-                  class="action like"
-                >
+                <div :class="{ active: topic.liked }" @click="like(topic)" class="action like">
                   <i class="iconfont icon-like" />
                 </div>
                 <div v-for="likeUser in likeUsers" :key="likeUser.id">
-                  <a
-                    :href="'/user/' + likeUser.id"
-                    :alt="likeUser.nickname"
-                    target="_blank"
-                  >
+                  <a :href="'/user/' + likeUser.id" :alt="likeUser.nickname" target="_blank">
                     <img
                       :src="likeUser.smallAvatar"
                       :alt="likeUser.nickname"
@@ -161,42 +142,35 @@
           />
         </div>
         <div class="right-container">
-          <a
-            class="button is-success"
-            href="/topic/create"
-            style="width: 100%;"
-          >
-            <span class="icon"><i class="iconfont icon-topic"/></span>
+          <a class="button is-success" href="/topic/create" style="width: 100%;">
+            <span class="icon">
+              <i class="iconfont icon-topic" />
+            </span>
             <span>发表话题</span>
           </a>
           <div class="user-simple">
             <div class="base-info">
               <a :href="'/user/' + topic.user.id" :alt="topic.user.nickname">
-                <img
-                  :src="topic.user.smallAvatar"
-                  :alt="topic.user.nickname"
-                  class="avatar"
-                />
+                <img :src="topic.user.smallAvatar" :alt="topic.user.nickname" class="avatar" />
               </a>
               <div class="nickname">
                 <a
                   :href="'/user/' + topic.user.id"
                   :alt="topic.user.nickname"
-                  >{{ topic.user.nickname }}</a
-                >
+                >{{ topic.user.nickname }}</a>
               </div>
-              <div class="description">
-                {{ topic.user.description }}
-              </div>
+              <div class="description">{{ topic.user.description }}</div>
             </div>
             <div class="extra-info">
               <ul class="extra-data">
                 <li>
-                  <span>积分</span><br />
+                  <span>积分</span>
+                  <br />
                   <b>{{ topic.user.score }}</b>
                 </li>
                 <li>
-                  <span>注册排名</span><br />
+                  <span>注册排名</span>
+                  <br />
                   <b>{{ topic.user.id }}</b>
                 </li>
               </ul>
@@ -205,13 +179,11 @@
 
           <div class="ad">
             <!-- 展示广告 -->
-            <adsbygoogle ad-slot="1742173616" />
+            <adsbygoogle ad-slot="6333489467" />
           </div>
 
           <div ref="toc" v-if="topic.toc" class="widget no-bg toc">
-            <div class="widget-header">
-              目录
-            </div>
+            <div class="widget-header">目录</div>
             <div v-html="topic.toc" class="widget-content" />
           </div>
         </div>
